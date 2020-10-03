@@ -7,3 +7,4 @@
 5. Merge conflict has appeared because both changes in `README.md` was in a single place of separated branches (have shared ancestor but these commit objects are different), so, git has no idea how to deal with and transfers control to us.
 6. Some changes from GitHub web editor
 7. To retrieve changes from the remote I have used the `git pull origin master` command.
+8. An image example <br >![](./image_example.jpg)
