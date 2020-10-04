@@ -12,3 +12,4 @@ pipenv shell
 6. Implemented `get_time_of_day_name()` function that returns name of day time or throws exception `RuntimeError` if argument does not contain time string.
 7. Implemented `test_get_time_of_day()` unit test for check is function `get_time_of_day_name()` work correctly.
 8. To redirect stdout stream to the file we should use `>` operator. To append stdout to the file `>>` needed. To store result of **app.py** execution to file `results.txt` command `python3 app.py > results.txt` should be used. To append result of unit tests execution `pytest tests/tests.py >> results.txt` should be executed. 
+9. Wrote makefile for the repository. Add rules for set up the environment and install dependencies (`make install`), run unit tests (`make test`), run application (`make run`), and deploy (`make deploy`).
