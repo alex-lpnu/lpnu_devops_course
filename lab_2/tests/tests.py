@@ -1,5 +1,5 @@
 import unittest
-from app import main
+from app import main, get_time_of_day_name
 
 
 class TestClass(unittest.TestCase):
@@ -21,6 +21,12 @@ class TestClass(unittest.TestCase):
         with self.assertRaises(Exception):
             main(self.ip_url)
 
-    def test_home_work(self):
-        # Ваш захист
-        self.assertTrue(True)
+    def test_get_time_of_day(self):
+        self.assertEqual(get_time_of_day_name("12:12:12 AM"), "day")
+        self.assertEqual(get_time_of_day_name("12:12:12 PM"), "night")
+
+        try:
+            get_time_of_day_name("sample non time text")
+            self.assertTrue(False)
+        except RuntimeError:
+            self.assertTrue(True)

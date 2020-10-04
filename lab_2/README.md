@@ -10,3 +10,4 @@ pipenv shell
 4. Installed **pytest** using `pipenv install pytest`.
 5. Run unit tests with `pytest tests/tests.py`. All tests has passed.
 6. Implemented `get_time_of_day_name()` function that returns name of day time or throws exception `RuntimeError` if argument does not contain time string.
+7. Implemented `test_get_time_of_day()` unit test for check is function `get_time_of_day_name()` work correctly.
