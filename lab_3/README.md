@@ -10,3 +10,5 @@
    ERROR 2020-10-04 22:57:20,762 root : Unable to conect to the server: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19dbf31280>: Failed to establish a new connection: [Errno 111] Connection refused'))
    ```
 8. Implemented periodic (one time per minute) monitoring the server status and write logs. Time delays are possible by time.sleep() function
+9. Implemented alias for quick server startup (pipenv alias)
+    ![](screens/9.png)
