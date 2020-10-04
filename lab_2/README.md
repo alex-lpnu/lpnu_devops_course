@@ -11,3 +11,4 @@ pipenv shell
 5. Run unit tests with `pytest tests/tests.py`. All tests has passed.
 6. Implemented `get_time_of_day_name()` function that returns name of day time or throws exception `RuntimeError` if argument does not contain time string.
 7. Implemented `test_get_time_of_day()` unit test for check is function `get_time_of_day_name()` work correctly.
+8. To redirect stdout stream to the file we should use `>` operator. To append stdout to the file `>>` needed. To store result of **app.py** execution to file `results.txt` command `python3 app.py > results.txt` should be used. To append result of unit tests execution `pytest tests/tests.py >> results.txt` should be executed. 
