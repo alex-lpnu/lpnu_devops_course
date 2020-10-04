@@ -13,13 +13,16 @@ log = logging.getLogger(__name__)
 
 
 def main(url):
-    r = requests.get(url)
-    data = json.loads(r.content)
-    logging.info("Сервер доступний. Час на сервері: %s", data['datetime'])
-    logging.info("Запитувана сторінка: : %s", data['server_url'])
-    logging.info("Відповідь сервера місти наступні поля:")
-    for key in data.keys():
-        logging.info("Ключ: %s, Значення: %s", key, data[key])
+    try: 
+        r = requests.get(url)
+        data = json.loads(r.content)
+        logging.info("Сервер доступний. Час на сервері: %s", data['datetime'])
+        logging.info("Запитувана сторінка: : %s", data['server_url'])
+        logging.info("Відповідь сервера місти наступні поля:")
+        for key in data.keys():
+            logging.info("Ключ: %s, Значення: %s", key, data[key])
+    except requests.exceptions.ConnectionError as e:
+        logging.error("Unable to conect to the server: " + str(e))
 
 
 if __name__ == '__main__':
