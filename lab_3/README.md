@@ -4,3 +4,4 @@
 3. Server works fine =) ![](screens/3.png)
 4. Created all templates, add main/templates dir, created `main/templates/main.html`, added `main/urls.py`
 5. Created simpe HTHL template, Django view for this template, simple page with JSON response, bound url's to corresponding views.
+6. Add some useful information in the health view, that will be sent in the response. There are current server UTC time, requested URL, information about the server ( OS type, the current logged user, server PID), and client information ( user-agent, remote address, remote host). The response of server is shown at the image below ![](screens/6.png)
