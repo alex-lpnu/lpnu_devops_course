@@ -21,6 +21,11 @@ def check_time(d):
         print("No date in response!!!")
         raise KeyError
 
+    try:
+        print("Hello! Have a nice " + get_time_of_day_name(d['time']))
+    except RuntimeError as e:
+        print(e)
+
 
 def main(url=''):
     if not url:
@@ -39,9 +44,13 @@ def main(url=''):
     return True
 
 
-def home_work():
-    # Ваш захист
-    pass
+def get_time_of_day_name(time):
+    if 'AM' in time:
+        return 'day'
+    elif 'PM' in time:
+        return 'night'
+    else:
+        raise RuntimeError("`time` argument does not contain time")
 
 
 if __name__ == "__main__":
