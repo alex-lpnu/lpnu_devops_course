@@ -7,3 +7,4 @@ pipenv shell
 ```
 2. Installed **requests** and **ntplib** libraries with their dependencies using `pipenv install requests ntplib`.
 3. Created app.py script from given source. The result of execution is error message, if no URL provided, or UTC time, parsed from JSON. To expolore result of execution `python3 app.py` in virtual environment was used.
+4. Installed **pytest** using `pipenv install pytest`.
