@@ -60,3 +60,7 @@
       $ sudo docker images
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
    ```
+1. Create `docker-compose.yml`. This project is litlle bit differs from previous: there is a two network instead of one:
+   - public - in this network works public web-interface of application
+   - secret - this network used for communication with redis, nobody outside can't accet it
+   
