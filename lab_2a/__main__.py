@@ -31,3 +31,8 @@ if __name__ == '__main__':
         how_to_write_logs()
     else:
         main(args.opt)
+
+    print("Numbers")
+    for i in common.get_odd_even_numbers(True):
+        print(i, end=' ')
+    print()

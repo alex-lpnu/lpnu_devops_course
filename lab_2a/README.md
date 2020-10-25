@@ -133,3 +133,18 @@
             2020-10-25 15:54:20,216 root WARNING: Це Warning повідомлення
             2020-10-25 15:54:20,216 root ERROR: Це повідомлення про помилку
         ```
+   1. Implemented function `get_odd_even_numbers(is_even)` in common module. 
+        ```python
+            def get_odd_even_numbers(is_even):
+            offset = 1 if not is_even else 0
+            return range(offset, 100, 2)
+        ```
+        Output:
+        ```
+            $ python3 .
+            We are in the __main__
+            2020-10-25 16:06:38.533879
+            linux
+            Numbers
+            0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98
+        ```
