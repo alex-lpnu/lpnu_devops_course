@@ -15,3 +15,4 @@
    Execution output for these commands located at `test_output.txt` file of this repo.
 1. Learned the Dockerfile documentation
 1. Create new Dockerfile with Django web app from previous lab
+1. Created new DockerHub [repository](https://hub.docker.com/repository/docker/sashakovalchuk/lab4) for this lab 
