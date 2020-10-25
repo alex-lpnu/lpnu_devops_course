@@ -84,3 +84,4 @@
    Removing network lab5_public
    ```
 1. Uploaded images to the hub with `sudo docker-compose push`. [App](https://hub.docker.com/layers/sashakovalchuk/lab5/compose-app/images/sha256-53dacc0c8e0483e1fed1f66a05ad413540f43625ed26432f6f0b58085f5ec529?context=repo) and [tets](https://hub.docker.com/layers/sashakovalchuk/lab5/compose-tests/images/sha256-3c27333c55ec1f2f7a0ba32c8a27bb2bcc59512f906c2c34c164253276cabe61?context=repo).
+1. In my opinion, it is better to use docker-compose, because it is more desirable in the docker context, it developed especially for docker and handle more docker features in an easier way rather than makefile.
