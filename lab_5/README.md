@@ -20,3 +20,9 @@
 
    After these manipulations tests passes and all the web pages works fine.
 1. Add Dockerfiles's for app and unit tests, create Makefile for deploying.
+1. Makefile consists of the next rules:
+   - app - run `docker build` for an `Dockerfile.app`, build application container
+   - tests - run `docker build` for an `Dockerfile.tests`, build test app container
+   - run - create a docker container network, run the redis container, run the app container 
+   - test-app - run test app container
+   - docker-prune - docker prune (removes all unused containers, networks, volumes, images)
