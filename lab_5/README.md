@@ -26,3 +26,7 @@
    - run - create a docker container network, run the redis container, run the app container 
    - test-app - run test app container
    - docker-prune - docker prune (removes all unused containers, networks, volumes, images)
+1. Build and run app container with `make app && make run`, run tests with `make tests && make test-app`. All tests has passed. Web app work correctly:
+   ![main page](screenshots/main.png)
+   ![hits](screenshots/hits.png)
+   ![logs](screenshots/logs.png)
