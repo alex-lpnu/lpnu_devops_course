@@ -23,3 +23,6 @@ docker-prune:
 
 push:
 	@$(foreach state,$(STATES), sudo docker push $(REPO):$(state);)
+
+images-delete:
+	@sudo docker image rm --force $(shell sudo docker images -q)

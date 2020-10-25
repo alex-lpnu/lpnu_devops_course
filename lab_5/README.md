@@ -36,3 +36,27 @@
    push:
    	@$(foreach state,$(STATES), sudo docker push $(REPO):$(state);)
    ```
+1. Implemented make rule for all images deletion:
+   ```makefile
+   images-delete:
+      @sudo docker image rm --force $(shell sudo docker images -q)
+   ```
+   Before deletion:
+   ```
+         $ sudo docker images
+   REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+   sashakovalchuk/lab5   tests               9f6c9ad14eae        6 minutes ago       135MB
+   sashakovalchuk/lab5   app                 d7d473418d37        6 minutes ago       129MB
+   vnsq                  0.2.2-build_1       ca32a58e249a        2 days ago          544MB
+   vnsq                  latest              ca32a58e249a        2 days ago          544MB
+   python                3.7-alpine          4d91c1ce4cc8        3 days ago          41.1MB
+   python                3.8-slim            41dcfe21e8fd        5 days ago          113MB
+   ubuntu                20.04               9140108b62dc        4 weeks ago         72.9MB
+   ubuntu                18.04               56def654ec22        4 weeks ago         63.2MB
+   docker/whalesay       latest              6b362a9f73eb        5 years ago         247MB
+   ```
+   After deletion:
+   ```
+      $ sudo docker images
+   REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+   ```
