@@ -65,3 +65,25 @@
             Error occurrend while opening the file:  [Errno 2] No such file or directory: 'non-existiong-filepath'
             Finally stuff
         ```
+   1. Implemented context manager example:
+        ```python
+            class ContextManagerExample:
+                def __init__(self):
+                    print(self.__class__.__name__, 'init')
+
+                def __enter__(self):
+                    print(self.__class__.__name__, 'enter')
+
+                def __exit__(self, exc_type, exc_val, exc_cb):
+                    print(self.__class__.__name__, 'exit')
+
+            with ContextManagerExample() as obj:
+                print("Context object stuff")
+        ```
+        Execution output: 
+        ```
+            ContextManagerExample init
+            ContextManagerExample enter
+            Context object stuff
+            ContextManagerExample exit
+        ```

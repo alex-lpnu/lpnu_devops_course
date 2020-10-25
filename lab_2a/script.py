@@ -27,3 +27,18 @@ except FileNotFoundError as e:
     print('Error occurrend while opening the file: ', e)
 finally:
     print('Finally stuff')
+
+#Context manager
+
+class ContextManagerExample:
+    def __init__(self):
+        print(self.__class__.__name__, 'init')
+
+    def __enter__(self):
+        print(self.__class__.__name__, 'enter')
+
+    def __exit__(self, exc_type, exc_val, exc_cb):
+        print(self.__class__.__name__, 'exit')
+
+with ContextManagerExample() as obj:
+    print("Context object stuff")
