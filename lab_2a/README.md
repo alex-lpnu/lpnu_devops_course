@@ -96,3 +96,10 @@
             Factorial 4th power example:  10^4 =  10000
         ```
             Lambda function (aka anonymous function) is a function which does not have a unique identifier for access
+1. Create directory structure
+   1. Execute python in this directory. Output:
+        ```
+            We are in the __main__
+            2020-10-25 14:59:22.890612
+            linux
+        ```
