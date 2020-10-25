@@ -21,3 +21,8 @@
    sudo docker build --tag sashakovalchuk/lab4:v1.0.0 .
    sudo docker push sashakovalchuk/lab4:v1.0.0
    ```
+1. Run the docker image with 
+   ```
+   sudo docker run -it --name=django-page --rm --publish 8000:8000 sashakovalchuk/lab4:v1.0.0
+   ```
+   Web page works well
