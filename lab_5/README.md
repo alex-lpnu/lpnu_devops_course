@@ -19,3 +19,4 @@
    2. App could not automitically create logs directory. I created it manually. 
 
    After these manipulations tests passes and all the web pages works fine.
+1. Add Dockerfiles's for app and unit tests, create Makefile for deploying.
