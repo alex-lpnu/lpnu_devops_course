@@ -1,0 +1,9 @@
+INFO 2020-10-04 23:52:09,752 root : Сервер доступний. Час на сервері: 2020-10-04T20:52:09.751245
+INFO 2020-10-04 23:52:09,752 root : Запитувана сторінка: : http://localhost:8000/health/
+INFO 2020-10-04 23:52:09,753 root : Відповідь сервера місти наступні поля:
+INFO 2020-10-04 23:52:09,753 root : Ключ: servername, Значення: lab server
+INFO 2020-10-04 23:52:09,753 root : Ключ: random, Значення: 184
+INFO 2020-10-04 23:52:09,753 root : Ключ: datetime, Значення: 2020-10-04T20:52:09.751245
+INFO 2020-10-04 23:52:09,753 root : Ключ: server_url, Значення: http://localhost:8000/health/
+INFO 2020-10-04 23:52:09,753 root : Ключ: server_iinfo, Значення: {'system': 'posix', 'user': 'dhdhxji', 'srv_pid': 227106}
+INFO 2020-10-04 23:52:09,753 root : Ключ: client_info, Значення: {'user agent': 'python-requests/2.24.0', 'remote addr': '127.0.0.1', 'remote host': ''}
