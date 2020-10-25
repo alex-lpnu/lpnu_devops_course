@@ -19,7 +19,6 @@ def health(request):
         'server_url': request.build_absolute_uri(),
         'server_iinfo': {
             'system': os.name,
-            'user': os.getlogin(),
             'srv_pid': os.getpid(),
         },
         'client_info': {
