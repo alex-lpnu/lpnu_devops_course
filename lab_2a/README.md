@@ -87,3 +87,12 @@
             Context object stuff
             ContextManagerExample exit
         ```
+   1. Lambda function example:
+        ```python
+            print('Factorial 4th power example: ', '10^4 = ', (lambda n: n*n*n*n)(10))
+        ```
+        Execution output:
+        ```
+            Factorial 4th power example:  10^4 =  10000
+        ```
+            Lambda function (aka anonymous function) is a function which does not have a unique identifier for access

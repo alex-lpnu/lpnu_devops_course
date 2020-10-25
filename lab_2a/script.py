@@ -42,3 +42,6 @@ class ContextManagerExample:
 
 with ContextManagerExample() as obj:
     print("Context object stuff")
+
+#Lambda functions
+print('Factorial 4th power example: ', '10^4 = ', (lambda n: n*n*n*n)(10))
