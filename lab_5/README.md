@@ -63,4 +63,8 @@
 1. Create `docker-compose.yml`. This project is litlle bit differs from previous: there is a two network instead of one:
    - public - in this network works public web-interface of application
    - secret - this network used for communication with redis, nobody outside can't accet it
-   
+1. Run docker-compose:
+   ```
+   sudo docker-compose -p lab5 up
+   ```
+1. Web app works well on 80 port
