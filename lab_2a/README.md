@@ -20,3 +20,8 @@
             Third built-in constant None
             4th built-in constant NotImplemented
         ```
+   1. Printing built-in function example:
+        ```python
+            print('Eval call example', eval('abs(-12.5)'))
+            print('Map call example', tuple(map(len, ('string1', 'wow', 'another string'))))
+        ```
