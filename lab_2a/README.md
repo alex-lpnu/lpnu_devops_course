@@ -103,3 +103,33 @@
             2020-10-25 14:59:22.890612
             linux
         ```
+   1. This application parse command line arguments and print it, system information such as current system time and platform name. This information retrieved from `common` module (located in modules directory).
+      1. When run the program with `-h` option, help will be displayed.
+        ```
+            $ python3 . -h
+            usage: . [-h] [-o OPT] [-l]
+
+            Приклад передачі аргументів у Python програму.
+
+            optional arguments:
+            -h, --help            show this help message and exit
+            -o OPT, --optional OPT
+                                    Цей параметр є вибірковим.
+            -l, --logs            Якщо виконати команду з цим параметром будуть виводитись логи.
+        ``` 
+      1. It run application with `-o This text shold be displayed"` argument string will be displayed too:
+        ```
+            $ python3 . -o "This text shold be displayed"
+            We are in the __main__
+            2020-10-25 15:50:41.769153
+            linux
+            З консолі було передано аргумент
+            ========== >> This text shold be displayed << ==========
+        ```
+      1. When run application with `-l` option, output will be like:
+        ```
+            $ python3 . -l
+            2020-10-25 15:54:20,216 root INFO: Тут буде просто інформативне повідомлення
+            2020-10-25 15:54:20,216 root WARNING: Це Warning повідомлення
+            2020-10-25 15:54:20,216 root ERROR: Це повідомлення про помилку
+        ```
