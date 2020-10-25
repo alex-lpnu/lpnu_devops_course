@@ -68,3 +68,18 @@
    sudo docker-compose -p lab5 up
    ```
 1. Web app works well on 80 port
+1. docker-compose has created next images:
+   ```
+      $ sudo docker images
+   REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+   sashakovalchuk/lab5   compose-tests       f1d9f5cdd182        2 minutes ago       135MB
+   sashakovalchuk/lab5   compose-app         0c7679dedfb0        3 minutes ago       129MB
+   redis                 alpine              8d1b562adb1c        3 days ago          31.1MB
+   python                3.7-alpine          4d91c1ce4cc8        3 days ago          41.1MB
+   ```
+1. Stopped project and free resources with `sudo docker-compose down`:
+   ```
+      $ sudo docker-compose down
+   Removing network lab5_secret
+   Removing network lab5_public
+   ```
