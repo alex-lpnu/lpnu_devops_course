@@ -36,3 +36,9 @@ if __name__ == '__main__':
     for i in common.get_odd_even_numbers(True):
         print(i, end=' ')
     print()
+
+    try:
+        common.possible_exception_func()
+        logger.info('Function does not raised exception')
+    except Exception as e:
+        logger.error('Function raised exception' + str(e))
