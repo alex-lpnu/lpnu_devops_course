@@ -1,24 +1,24 @@
 STATES := app tests
-REPO := bobas/lab4-examples
+REPO := sashakovalchuk/lab5
 
 .PHONY: $(STATES)
 
 $(STATES):
-	@docker build -f Dockerfile.$(@) -t $(REPO):$(@) .
+	@sudo docker build -f Dockerfile.$(@) -t $(REPO):$(@) .
 
 run:
-	@docker network create --driver=bridge appnet \
-	&& docker run --rm --name redis --net=appnet -d redis \
-	&& docker run --rm --name app --net=appnet -p 5000:5000 -d $(REPO):app
+	@sudo docker network create --driver=bridge appnet \
+	&& sudo docker run --rm --name redis --net=appnet -d redis \
+	&& sudo docker run --rm --name app --net=appnet -p 5000:5000 -d $(REPO):app
 
 test-app:
-	@docker run --rm -it --name test --net=appnet $(REPO):tests
+	@sudo docker run --rm -it --name test --net=appnet $(REPO):tests
 
 docker-prune:
-	@docker rm $$(docker ps -a -q) --force || true \
-	&& docker container prune --force \
-	&& docker volume prune --force \
-	&& docker network prune --force \
-	&& docker image prune --force
+	@sudo docker rm $$(sudo docker ps -a -q) --force || true \
+	&& sudo docker container prune --force \
+	&& sudo docker volume prune --force \
+	&& sudo docker network prune --force \
+	&& sudo docker image prune --force
 
 
