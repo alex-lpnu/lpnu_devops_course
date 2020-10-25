@@ -30,3 +30,4 @@
    ![main page](screenshots/main.png)
    ![hits](screenshots/hits.png)
    ![logs](screenshots/logs.png)
+1. Remove all project resources with `make docker-prune`
