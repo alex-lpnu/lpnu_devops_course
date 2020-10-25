@@ -51,3 +51,17 @@
             6
             8
         ``` 
+   1. Implemented try/except/finally example:
+        ```python
+            try:
+                open('non-existiong-filepath', 'r')
+            except FileNotFoundError as e:
+                print('Error occurrend while opening the file: ', e)
+            finally:
+                print('Finally stuff')
+        ``` 
+        Execution result:
+        ```
+            Error occurrend while opening the file:  [Errno 2] No such file or directory: 'non-existiong-filepath'
+            Finally stuff
+        ```

@@ -20,3 +20,10 @@ else:
     for num in range(0, 10, 2):
         print(num)
  
+#Exceptions
+try:
+    open('non-existiong-filepath', 'r')
+except FileNotFoundError as e:
+    print('Error occurrend while opening the file: ', e)
+finally:
+    print('Finally stuff')
