@@ -31,3 +31,8 @@
    ![hits](screenshots/hits.png)
    ![logs](screenshots/logs.png)
 1. Remove all project resources with `make docker-prune`
+1. Implemented pushing images to the dockerhub by make's `push target`:
+   ```makefile
+   push:
+   	@$(foreach state,$(STATES), sudo docker push $(REPO):$(state);)
+   ```
