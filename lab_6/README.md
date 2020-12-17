@@ -6,3 +6,4 @@
 1. After some bugfixes Travis has successfully executed all jobs ![](screens/3.png)
 1. Implemented test execution and install by travis from make rule [lab 2]
 1. Add monitor container build to the travis build
+1. Implement lab 5 homewirk: pushing containers to the dockerhub via make rule  
