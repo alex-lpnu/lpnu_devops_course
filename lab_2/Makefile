@@ -15,6 +15,9 @@ test:
 	@echo "==== [$$(date)] ====" >> $(TEST_FILE_PATH)
 	pipenv run pytest tests/tests.py >> $(TEST_FILE_PATH)
 
+test-cli:
+	pipenv run pytest tests/tests.py
+
 run:
 	@echo "Running app..."
 	@echo "==== [$$(date)] ====" >> $(RESULT_FILE_PATH)
