@@ -4,4 +4,5 @@
 1. Add .travis.yml file
 1. Travis build started (and fails) ![](screens/1.png) ![](screens/2.png)
 1. After some bugfixes Travis has successfully executed all jobs ![](screens/3.png)
-1. Implemented test execution and insrall by travis from make rule [lab 2]
+1. Implemented test execution and install by travis from make rule [lab 2]
+1. Add monitor container build to the travis build

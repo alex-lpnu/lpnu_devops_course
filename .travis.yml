@@ -27,8 +27,10 @@ jobs:
         - cd ./lab_4/
       script:
         - docker build -t sashakovalchuk/lab4:django-travis .
+        - docker build -t sashakovalchuk/lab4:monitor-travis --file Dockerfile.monitor . 
         - docker images
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push sashakovalchuk/lab4:django-travis; else echo "PR skip deploy"; fi
+        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push sashakovalchuk/lab4:monitor-travis; else echo "PR skip deploy"; fi
     - stage: "Build Lab 5."
       name: "Build and run Docker images via make"
       services:
